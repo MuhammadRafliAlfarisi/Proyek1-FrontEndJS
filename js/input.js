@@ -34,7 +34,7 @@ inputButton.addEventListener("click", () => {
     no_hp: no_hp,
   };
   // Kirim permintaan POST ke server untuk menambahkan data
-  fetch("http://127.0.0.1:3000/api/belajar", {
+  fetch("http://127.0.0.1:3000/api/belajar/", {
     method: "POST",
     headers: {
       "Content-Type": "application/json", 
@@ -45,7 +45,7 @@ inputButton.addEventListener("click", () => {
     .then((result) => {
       console.log("Sukses:", result);
       alert("Data berhasil ditambahkan!");
-      window.location.href = "index.html";
+      window.location.href = "landingpage.html";
     })
     .catch((error) => {
       console.error("Error:", error);

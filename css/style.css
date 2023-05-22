@@ -27,3 +27,18 @@ label {
 	margin-left: 10px;
 	margin-right: 10px;
 }
+
+.dashboard {
+    height: 80vh;
+    background-image: url("../img/puskesmas.jpg"); 
+    background-repeat: no-repeat;
+    background-size: cover;
+    margin-bottom: 50px;
+}
+
+.p {
+    color: white;
+    font-size: large;
+    margin: 15%  0%;
+
+}

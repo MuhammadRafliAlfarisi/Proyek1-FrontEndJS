@@ -3,7 +3,7 @@
   <head>
     <meta charset="UTF-8" />
     <meta name="viewport" content="width=device-width, initial-scale=1.0" />
-    <title>Input Pasien</title>
+    <title>Input Dokter</title>
     <link
       rel="stylesheet"
       href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/5.13.1/css/all.min.css"
@@ -26,69 +26,36 @@
           <div class="card mt-2 mx-auto p-4 bg-light">
             <div class="card-body bg-light">
               <form id="contact-form">
-                <div class="form-group">
-                  <label for="nama">Nama Lengkap</label>
+                  <div class="form-group">
+                  <label for="id_dokter">ID Dokter</label>
                   <input
-                    id="nama_lengkap"
-                    type="text"
-                    name="nama_lengkap"
-                    class="form-control"
-                    placeholder="Masukkan Nama Lengkap"
-                    required
-                  />
-                </div>
-                <div class="form-group">
-                  <label for="nik">NIK</label>
-                  <input
-                    id="nik"
+                    id="id_dokter"
                     type="number"
-                    name="nik"
+                    name="id_dokter"
                     class="form-control"
-                    placeholder="Masukkan NIK"
+                    placeholder="Masukkan ID Dokter"
                     required
                   />
                 </div>
                 <div class="form-group">
-                  <label for="jenis_kelamin">Jenis Kelamin</label>
+                    <label for="nama">Nama Lengkap</label>
+                    <input
+                      id="nama"
+                      type="text"
+                      name="nama"
+                      class="form-control"
+                      placeholder="Masukkan Nama Lengkap"
+                      required
+                    />
+                  </div>
+                <div class="form-group">
+                  <label for="keahlian">Keahlian</label>
                   <input
-                    id="jenis_kelamin"
+                    id="keahlian"
                     type="text"
-                    name="jenis_kelamin"
+                    name="keahlian"
                     class="form-control"
-                    placeholder="Masukkan Jenis Kelamin"
-                    required
-                  />
-                </div>
-                <div class="form-group">
-                  <label for="tempat_lahir">Tempat Lahir</label>
-                  <input
-                    id="tempat_lahir"
-                    type="text"
-                    name="tempat_lahir"
-                    class="form-control"
-                    placeholder="Masukkan Tempat Lahir"
-                    required
-                  />
-                </div>
-                <div class="form-group">
-                  <label for="tanggal_lahir">Tanggal Lahir</label>
-                  <input
-                    id="tanggal_lahir"
-                    type="date"
-                    name="tanggal_lahir"
-                    class="form-control"
-                    placeholder="Masukkan Tanggal Lahir"
-                    required
-                  />
-                </div>
-                <div class="form-group">
-                  <label for="alamat">Alamat</label>
-                  <input
-                    id="alamat"
-                    type="text"
-                    name="alamat"
-                    class="form-control"
-                    placeholder="Masukkan Alamat"
+                    placeholder="Masukkan Keahlian"
                     required
                   />
                 </div>
@@ -121,6 +88,6 @@
       crossorigin="anonymous"
       referrerpolicy="no-referrer"
     ></script>
-    <script src="js/input.js"></script>
+    <script src="js/input_doktor.js"></script>
   </body>
 </html>

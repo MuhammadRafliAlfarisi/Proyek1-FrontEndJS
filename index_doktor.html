@@ -4,7 +4,7 @@
     <meta charset="UTF-8" />
     <meta http-equiv="X-UA-Compatible" content="IE=edge" />
     <meta name="viewport" content="width=device-width, initial-scale=1.0" />
-    <title>Sistem Klini</title>
+    <title>Sistem Klinik</title>
 
     <link
       rel="stylesheet"
@@ -21,7 +21,7 @@
     <section>
       <nav class="navbar navbar-expand-lg bg-body-tertiary">
         <div class="container-fluid">
-          <a class="navbar-brand text-center" href="#">Data Pasien</a>
+          <a class="navbar-brand" href="#">Daftar Dokter</a>
           <button
             class="navbar-toggler"
             type="button"
@@ -32,6 +32,16 @@
             aria-label="Toggle navigation">
             <span class="navbar-toggler-icon"></span>
           </button>
+          <div class="collapse navbar-collapse" id="navbarSupportedContent">
+            <ul class="navbar-nav me-auto mb-2 mb-lg-0">
+              <li class="nav-item">
+                <a class="nav-link active" aria-current="page" href="index.html"
+                  >Dashboard</a
+                >
+              </li>
+            </ul>
+          </div>
+        </div>
       </nav>
     </section>
     <div class="container py-5">
@@ -39,8 +49,9 @@
         <div class="col-lg-10 mx-auto">
           <div class="card rounded shadow border-0">
             <div class="card-body p-5 bg-white rounded">
-              <a href="input.html"><button class="btn btn-primary mb-3">+ Tambah Data</button></a>
-              <a href="index_doktor.html"><button class="btn btn-primary mb-3"> Lihat Dokter</button></a>
+              <a href="input_doktor.html"
+                ><button class="btn btn-primary mb-3">+ Tambah Data</button></a
+              >
               <div class="table-responsive">
                 <table
                   id="example"
@@ -49,18 +60,15 @@
                   <thead>
                     <tr>
                       <th>Id</th>
+                      <th>ID Dokter</th>
                       <th>Nama Lengkap</th>
-                      <th>NIK</th>
-                      <th>Jenis Kelamin</th>
-                      <th>Tempat Lahir</th>
-                      <th>Tanggal Lahir</th>
-                      <th>Alamat</th>
+                      <th>Keahlian</th>
                       <th>No HP</th>
                       <th>Aksi</th>
                     </tr>
                   </thead>
-                  <tbody id="index-table">
-                    <script src="/js/index.js"></script>
+                  <tbody id="index_doktor-table">
+                    <script src="/js/index_doktor.js"></script>
                   </tbody>
                 </table>
               </div>

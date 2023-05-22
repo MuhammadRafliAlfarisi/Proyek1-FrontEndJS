@@ -4,7 +4,7 @@
     <meta charset="UTF-8" />
     <meta http-equiv="X-UA-Compatible" content="IE=edge" />
     <meta name="viewport" content="width=device-width, initial-scale=1.0" />
-    <title>Update Data Pasien</title>
+    <title>Update Data Dokter</title>
 
     <link
       rel="stylesheet"
@@ -19,12 +19,11 @@
     <link
       rel="stylesheet"
       href="https://maxcdn.bootstrapcdn.com/bootstrap/4.0.0/css/bootstrap.min.css" />
-    <link rel="stylesheet" href=".../css/style.css" />
   </head>
   <body>
     <div class="container">
       <div class="text-center mt-5">
-        <h1>Form Update Pasien</h1>
+        <h1>Form Update Dokter</h1>
       </div>
       <div class="row">
         <div class="col-lg-7 mx-auto">
@@ -36,79 +35,40 @@
                     <div class="row">
                       <div class="col-md-6">
                         <div class="form-group">
-                          <label for="nama">Nama</label>
+                          <label for="id_dokter">ID Dokter</label>
                           <input
-                            id="nama_lengkap"
-                            type="text"
-                            name="nama_lengkap"
+                            id="id_dokter"
+                            type="number"
+                            name="id_dokter"
                             class="form-control"
-                            placeholder="Masukkan Nama"
-                            required />
+                            placeholder="Masukkan ID Dokter"
+                            required 
+                            data-error="Lastname is required." />
                         </div>
                       </div>
                       <div class="col-md-6">
                         <div class="form-group">
-                          <label for="nik">NIK</label>
+                          <label for="nama">Nama Lengkap</label>
                           <input
-                            id="nik"
-                            type="number"
-                            name="nik"
+                            id="nama"
+                            type="text"
+                            name="nama"
                             class="form-control"
-                            placeholder="Masukkan NPM"
-                            required
-                            data-error="Lastname is required." />
+                            placeholder="Masukkan Nama Lengkap"
+                            required />
                         </div>
                       </div>
                     </div>
                     <div class="row">
                       <div class="col-md-6">
                         <div class="form-group">
-                          <label for="jenis_kelamin">Jenis Kelamin</label>
+                          <label for="keahlian">Keahlian</label>
                           <input
-                            id="jenis_kelamin"
+                            id="keahlian"
                             type="text"
-                            name="jenis_kelamin"
+                            name="keahlian"
                             class="form-control"
-                            placeholder="Masukkan jenis Kelamin"
-                            required />
-                        </div>
-                      </div>
-                    <div class="row">
-                      <div class="col-md-6">
-                        <div class="form-group">
-                          <label for="tempat_lahir">Tempat Lahir</label>
-                          <input
-                            id="tempat_lahir"
-                            type="text"
-                            name="tempat_lahir"
-                            class="form-control"
-                            placeholder="Masukkan Kelas"
-                            required />
-                        </div>
-                      </div>
-                    <div class="row">
-                      <div class="col-md-6">
-                        <div class="form-group">
-                          <label for="tanggal_lahir">Tanggal Lahir</label>
-                          <input
-                            id="tanggal_lahir"
-                            type="date"
-                            name="tanggal_lahir"
-                            class="form-control"
-                            placeholder="Masukkan Kelas"
-                            required />
-                        </div>
-                      </div>
-                    <div class="row">
-                      <div class="col-md-6">
-                        <div class="form-group">
-                          <label for="alamat">Alamat</label>
-                          <input
-                            id="alamat"
-                            type="text"
-                            name="alamat"
-                            class="form-control"
-                            placeholder="Masukkan Kelas"
+                            placeholder="Masukkan Keahlian"
                             required />
                         </div>
                       </div>
@@ -121,7 +81,7 @@
                             type="number"
                             name="no_hp"
                             class="form-control"
-                            placeholder="Masukkan Kelas"
+                            placeholder="Masukkan No HP"
                             required />
                         </div>
                       </div>
@@ -147,5 +107,5 @@
     referrerpolicy="no-referrer"></script>
   <script src="https://stackpath.bootstrapcdn.com/bootstrap/4.0.0/js/bootstrap.bundle.min.js"></script>
   <script src="https://cdnjs.cloudflare.com/ajax/libs/jquery/3.2.1/jquery.min.js"></script>
-  <script src="js/update.js"></script>
+  <script src="js/update_doktor.js"></script>
 </html>
