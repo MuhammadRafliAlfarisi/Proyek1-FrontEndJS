@@ -4,7 +4,7 @@ const id = urlParams.get("id");
 
 // Ambil elemen formulir
 const form = document.getElementById("contact-form");
-const iddokterInput = document.getElementById("id_dokter");
+const nidInput = document.getElementById("nid");
 const namaInput = document.getElementById("nama");
 const keahlianInput = document.getElementById("keahlian");
 const nohpInput = document.getElementById("no_hp");
@@ -15,7 +15,7 @@ fetch(`http://127.0.0.1:3000/api/dokter/${id}`)
   })
   .then((data) => {
     const dokter = data.data;
-    iddokterInput.value = dokter.id_dokter; 
+    nidInput.value = dokter.nid; 
     namaInput.value = dokter.nama;
     keahlianInput.value = dokter.keahlian;
     nohpInput.value = dokter.no_hp;
@@ -24,7 +24,7 @@ fetch(`http://127.0.0.1:3000/api/dokter/${id}`)
 function updateData() {
   // Buat objek data yang akan dikirim ke server
   const data = {
-    id_dokter: parseInt(iddokterInput.value),
+    nid: parseInt(nidInput.value),
     nama: namaInput.value,
     keahlian: keahlianInput.value,
     no_hp: nohpInput.value,

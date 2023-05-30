@@ -19,13 +19,14 @@
   <body>
     <div class="container">
       <div class="text-center mt-5">
-        <h1>Form Input</h1>
+        <h1>Form Reservasi</h1>
       </div>
       <div class="row">
         <div class="col-lg-7 mx-auto">
           <div class="card mt-2 mx-auto p-4 bg-light">
             <div class="card-body bg-light">
               <form id="contact-form">
+                <input type="hidden" id="id_jadwal" name="id_jadwal">
                 <div class="form-group">
                   <label for="nama">Nama Lengkap</label>
                   <input
@@ -100,6 +101,65 @@
                     name="no_hp"
                     class="form-control"
                     placeholder="Masukkan No HP"
+                    required
+                  />
+                </div>
+                <div class="form-group">
+                  <label for="nama_dokter">Nama Dokter</label>
+                  <input
+                    id="nama_dokter"
+                    type="text"
+                    name="nama_dokter"
+                    class="form-control"
+                    placeholder="Masukkan Nama Dokter"
+                    required
+                    disabled
+                  />
+                </div>
+                <div class="form-group">
+                  <label for="hari">Hari</label>
+                  <input
+                    id="hari"
+                    type="text"
+                    name="hari"
+                    class="form-control"
+                    placeholder="Masukkan Hari"
+                    required
+                    disabled
+                  />
+                </div>
+                <div class="form-group">
+                  <label for="jam">Jam</label>
+                  <input
+                    id="jam"
+                    type="text"
+                    name="jam"
+                    class="form-control"
+                    placeholder="Masukkan Jam"
+                    required
+                    disabled
+                  />
+                </div>
+                <div class="form-group">
+                  <label for="ruangan">Ruangan</label>
+                  <input
+                    id="ruangan"
+                    type="text"
+                    name="ruangan"
+                    class="form-control"
+                    placeholder="Masukkan ruangan"
+                    required
+                    disabled
+                  />
+                </div>
+                <div class="form-group">
+                  <label for="tgl_reservasi">Tanggal Reservasi</label>
+                  <input
+                    id="tgl_reservasi"
+                    type="date"
+                    name="tgl_reservasi"
+                    class="form-control"
+                    placeholder="Masukkan Tanggal Reservasi"
                     required
                   />
                 </div>

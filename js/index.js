@@ -10,7 +10,6 @@ fetch("http://127.0.0.1:3000/api/belajar")
 			// Manipulasi data pegawai dan masukkan ke dalam bentuk tabel
 			tableData += `
                 <tr>
-				<td>${values.id}</td>
                 <td>${values.nama_lengkap}</td>
                 <td>${values.nik}</td>
                 <td>${values.jenis_kelamin}</td>
@@ -18,6 +17,11 @@ fetch("http://127.0.0.1:3000/api/belajar")
                 <td>${values.tanggal_lahir}</td>
                 <td>${values.alamat}</td>
                 <td>${values.no_hp}</td>
+                <td>${values.nama_dokter}</td>
+                <td>${values.hari}</td>
+                <td>${values.jam}</td>
+                <td>${values.ruangan}</td>
+                <td>${values.tgl_reservasi}</td>
                 <td>
                 <button type="button" class="btn btn-success" belajar-id="${values.id}">Edit</button>
                 <button type="button" class="btn btn-danger" belajar-id="${values.id}">Delete</button>

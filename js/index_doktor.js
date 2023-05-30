@@ -10,8 +10,7 @@ fetch("http://127.0.0.1:3000/api/dokter")
 			// Manipulasi data pegawai dan masukkan ke dalam bentuk tabel
 			tableData += `
                 <tr>
-				<td>${values.id}</td>
-                <td>${values.id_dokter}</td>
+                <td>${values.nid}</td>
                 <td>${values.nama}</td>
                 <td>${values.keahlian}</td>
                 <td>${values.no_hp}</td>

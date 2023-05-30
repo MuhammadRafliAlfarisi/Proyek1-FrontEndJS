@@ -11,6 +11,11 @@ const tempatlahirInput = document.getElementById("tempat_lahir");
 const tanggallahirInput = document.getElementById("tanggal_lahir");
 const alamatInput = document.getElementById("alamat");
 const nohpInput = document.getElementById("no_hp");
+const namadokterInput = document.getElementById("nama_dokter");
+const hariInput = document.getElementById("hari");
+const jamInput = document.getElementById("jam");
+const ruanganInput = document.getElementById("ruangan");
+const tglreservasiInput = document.getElementById("tgl_reservasi");
 // Isi formulir dengan data dari server berdasarkan ID
 fetch(`http://127.0.0.1:3000/api/belajar/${id}`)
   .then((result) => {
@@ -25,6 +30,12 @@ fetch(`http://127.0.0.1:3000/api/belajar/${id}`)
     tanggallahirInput.value = pasien.tanggal_lahir;
     alamatInput.value = pasien.alamat;
     nohpInput.value = pasien.no_hp;
+    idjadwalInput.value = data.id;
+    namadokterInput.value = data.dokter.nama;
+    hariInput.value = data.hari.hari;
+    jamInput.value = data.jam.jam;
+    ruanganInput.value = data.ruangan.nama_ruangan;
+    tglreservasiInput.value = pasien.tgl_reservasi;
   });
 // Fungsi untuk mengirim data ke server
 function updateData() {
@@ -36,7 +47,8 @@ function updateData() {
     tempat_lahir: tempatlahirInput.value,
     tanggal_lahir: tanggallahirInput.value,
     alamat: alamatInput.value,
-    no_hp: nohpInput.value,
+    id_jadwal: idjadwalInput.value,
+    tgl_reservasi: tglreservasiInput.value,
   };
   // Buat konfigurasi untuk request
   const options = {
