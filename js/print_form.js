@@ -1,12 +1,12 @@
 // Ambil nilai parameter dari URL
 const urlParams = new URLSearchParams(window.location.search);
-const id = urlParams.get("id");
+const Id = urlParams.get("id");
 
 // Fetch data menggunakan ID dari URL parameter
-fetch("http://127.0.0.1:3000/api/belajar/" + id)
+fetch(`http://127.0.0.1:3000/api/belajar/${Id}`)
   .then((response) => response.json())
   .then((result) => {
-    console.log(result);
+    // console.log(result);
     // Mengatur nilai-nilai ke elemen-elemen di halaman "print_form.html"
     document.getElementById("nama_lengkap").textContent = result.data.nama_lengkap;
     document.getElementById("nik").textContent = result.data.nik;
@@ -25,6 +25,3 @@ fetch("http://127.0.0.1:3000/api/belajar/" + id)
     console.error("Error:", error);
     alert("Terjadi kesalahan saat mengambil data.");
   });
-
-
-  

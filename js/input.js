@@ -1,3 +1,6 @@
+// const urlParams = new URLSearchParams(window.location.search);
+// const id = urlParams.get("id");
+
 // Ambil elemen formulir
 const form = document.getElementById("contact-form");
 const namalengkapInput = document.getElementById("nama_lengkap");
@@ -12,7 +15,7 @@ const nama_dokter = document.getElementById("nama_dokter");
 const hari = document.getElementById("hari");
 const jam = document.getElementById("jam");
 const ruangan = document.getElementById("ruangan");
-const tglreservasiInput = document.getElementById("tgl_reservasi");
+// const tglreservasiInput = document.getElementById("tgl_reservasi");
 // Tambahkan event listener pada tombol "Input Data"
 const inputButton = document.querySelector(".btn-success");
 
@@ -42,7 +45,7 @@ inputButton.addEventListener("click", () => {
   const alamat = alamatInput.value;
   const no_hp = nohpInput.value;
   const id_jadwal = idjadwalInput.value;
-  const tgl_reservasi = tglreservasiInput.value;
+  // const tgl_reservasi = tglreservasiInput.value;
   // Validasi input
   if (
     !nama_lengkap ||
@@ -52,8 +55,8 @@ inputButton.addEventListener("click", () => {
     !tanggal_lahir ||
     !alamat ||
     !no_hp ||
-    !id_jadwal ||
-    !tgl_reservasi
+    !id_jadwal
+    // !tgl_reservasi
   ) {
     alert("Silakan lengkapi semua field");
     return;
@@ -68,7 +71,7 @@ inputButton.addEventListener("click", () => {
     alamat: alamat,
     no_hp: no_hp,
     id_jadwal: id_jadwal,
-    tgl_reservasi: tgl_reservasi,
+    // tgl_reservasi: tgl_reservasi,
   };
   // Kirim permintaan POST ke server untuk menambahkan data
   fetch("http://127.0.0.1:3000/api/belajar/", {
@@ -81,8 +84,8 @@ inputButton.addEventListener("click", () => {
     .then((response) => response.json())
     .then((result) => {
       console.log("Sukses:", result);
-      const id = result.data.id
-      window.location.href = `print_form.html?id={id}`;
+      const id_passien = result.data.id
+      window.location.href = `print_form.html?id=${id_passien}`;
     })
     .catch((error) => {
       console.error("Error:", error);
