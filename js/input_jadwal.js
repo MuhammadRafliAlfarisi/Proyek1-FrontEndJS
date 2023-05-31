@@ -11,6 +11,7 @@ inputButton.addEventListener("click", () => {
   const id_dokter = parseInt(iddokterInput.value);
   const id_hari = parseInt(idhariInput.value);
   const id_jam = parseInt(idjamInput.value);
+  const id_ruangan = parseInt(idruanganInput.value);
   // Validasi input
   if (!iddokter || !id_hari || !id_jam || !id_ruangan ) {
     alert("Silakan lengkapi semua field");

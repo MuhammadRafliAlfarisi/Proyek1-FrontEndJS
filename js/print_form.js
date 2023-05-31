@@ -6,21 +6,25 @@ const id = urlParams.get("id");
 fetch("http://127.0.0.1:3000/api/belajar/" + id)
   .then((response) => response.json())
   .then((result) => {
+    console.log(result);
     // Mengatur nilai-nilai ke elemen-elemen di halaman "print_form.html"
-    document.getElementById("print-nama_lengkap").textContent = result.data.nama_lengkap;
-    document.getElementById("print-nik").textContent = result.data.nik;
-    document.getElementById("print-jenis_kelamin").textContent = result.data.jenis_kelamin;
-    document.getElementById("print-tempat_lahir").textContent = result.data.tempat_lahir;
-    document.getElementById("print-tanggal_lahir").textContent = result.data.tanggal_lahir;
-    document.getElementById("print-alamat").textContent = result.data.alamat;
-    document.getElementById("print-no_hp").textContent = result.data.no_hp;
-    document.getElementById("print-nama_dokter").textContent = result.data.nama_dokter;
-    document.getElementById("print-hari").textContent = result.data.hari;
-    document.getElementById("print-jam").textContent = result.data.jam;
-    document.getElementById("print-ruangan").textContent = result.data.ruangan;
-    document.getElementById("print-tgl_reservasi").textContent = result.data.tgl_reservasi;
+    document.getElementById("nama_lengkap").textContent = result.data.nama_lengkap;
+    document.getElementById("nik").textContent = result.data.nik;
+    document.getElementById("jenis_kelamin").textContent = result.data.jenis_kelamin;
+    document.getElementById("tempat_lahir").textContent = result.data.tempat_lahir;
+    document.getElementById("tanggal_lahir").textContent = result.data.tanggal_lahir;
+    document.getElementById("alamat").textContent = result.data.alamat;
+    document.getElementById("no_hp").textContent = result.data.no_hp;
+    document.getElementById("nama_dokter").textContent = result.data.jadwal_dokter.dokter.nama;
+    document.getElementById("hari").textContent = result.data.jadwal_dokter.hari.hari;
+    document.getElementById("jam").textContent = result.data.jadwal_dokter.jam.jam;
+    document.getElementById("ruangan").textContent = result.data.jadwal_dokter.ruangan.nama_ruangan;
+    document.getElementById("tgl_reservasi").textContent = result.data.tgl_reservasi;
   })
   .catch((error) => {
     console.error("Error:", error);
     alert("Terjadi kesalahan saat mengambil data.");
   });
+
+
+  
