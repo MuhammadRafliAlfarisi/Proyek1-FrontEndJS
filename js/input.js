@@ -73,6 +73,7 @@ inputButton.addEventListener("click", () => {
     id_jadwal: id_jadwal,
     // tgl_reservasi: tgl_reservasi,
   };
+//cobain developinp
   // Kirim permintaan POST ke server untuk menambahkan data
   fetch("http://127.0.0.1:3000/api/belajar/", {
     method: "POST",
@@ -84,7 +85,7 @@ inputButton.addEventListener("click", () => {
     .then((response) => response.json())
     .then((result) => {
       console.log("Sukses:", result);
-      const id_passien = result.data.id
+      const id_passien = result.data
       window.location.href = `print_form.html?id=${id_passien}`;
     })
     .catch((error) => {
