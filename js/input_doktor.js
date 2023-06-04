@@ -1,6 +1,6 @@
 // Ambil elemen formulir
 const form = document.getElementById("contact-form");
-const nid = document.getElementById("nid");
+const nidInput = document.getElementById("nid");
 const namaInput = document.getElementById("nama");
 const keahlianInput = document.getElementById("keahlian");
 const nohpInput = document.getElementById("no_hp");
@@ -8,7 +8,7 @@ const nohpInput = document.getElementById("no_hp");
 const inputButton = document.querySelector(".btn-success");
 inputButton.addEventListener("click", () => {
   // Ambil nilai input dari formulir
-  const nid = parseInt(nid.value);
+  const nid = parseInt(nidInput.value);
   const nama = namaInput.value;
   const keahlian = keahlianInput.value;
   const no_hp = nohpInput.value;
