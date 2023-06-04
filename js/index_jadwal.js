@@ -11,7 +11,7 @@ fetch("http://127.0.0.1:3000/api/jadwal_dokter")
 			const namaDokter = values.dokter.nama;
 			const namaHari = values.hari.hari;
 			const jam = values.jam.jam;
-			const ruangan = values.ruangan.namaRuangan;
+			const ruangan = values.ruangan.nama_ruangan;
 
 			// Manipulasi data pegawai dan masukkan ke dalam bentuk tabel
 			tableData += `
