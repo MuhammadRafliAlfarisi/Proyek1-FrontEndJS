@@ -68,3 +68,18 @@ fetch("http://127.0.0.1:3000/api/jadwal_dokter")
 		console.log('error', error);
 		alert('Terjadi kesalahan pada server');
 	});
+
+	// Mendapatkan elemen tombol log out
+const logoutButton = document.getElementById('logoutButton');
+
+// Menambahkan event listener untuk tombol log out
+if (logoutButton) {
+    logoutButton.addEventListener('click', () => {
+        // Mengirim permintaan logout ke server atau melakukan tindakan logout yang diperlukan
+        // Misalnya, menghapus token sesi atau informasi login lainnya
+        // Setelah logout berhasil, arahkan pengguna ke halaman login atau halaman lainnya
+        // Gantilah URL sesuai dengan kebutuhan
+        alert('Logout successful!');
+        window.location.href = 'landingpage.html';
+    });
+}

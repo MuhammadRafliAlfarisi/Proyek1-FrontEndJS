@@ -22,6 +22,7 @@ fetch("http://127.0.0.1:3000/api/belajar")
                 <td>${values.jadwal_dokter.jam.jam}</td>
                 <td>${values.jadwal_dokter.ruangan.nama_ruangan}</td>
                 <td>${values.tgl_reservasi}</td>
+                <td>${values.reservasi}</td>
                 <td>
                 <button type="button" class="btn btn-danger" belajar-id="${values.id}">Delete</button>
               </td>

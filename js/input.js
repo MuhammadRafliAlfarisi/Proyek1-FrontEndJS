@@ -10,13 +10,12 @@ const tempatlahirInput = document.getElementById("tempat_lahir");
 const tanggallahirInput = document.getElementById("tanggal_lahir");
 const alamatInput = document.getElementById("alamat");
 const nohpInput = document.getElementById("no_hp");
+const reservasiInput = document.getElementById("reservasi");
 const idjadwalInput = document.getElementById("id_jadwal");
 const nama_dokter = document.getElementById("nama_dokter");
 const hari = document.getElementById("hari");
 const jam = document.getElementById("jam");
 const ruangan = document.getElementById("ruangan");
-// const tglreservasiInput = document.getElementById("tgl_reservasi");
-// Tambahkan event listener pada tombol "Input Data"
 const inputButton = document.querySelector(".btn-success");
 
 let queryString = {}
@@ -27,7 +26,6 @@ fetch("http://127.0.0.1:3000/api/jadwal_dokter/"+ queryString.id)
     return result.json();
   })
   .then(({data}) => {
-    // console.log(data)
     idjadwalInput.value = data.id;
     nama_dokter.value = data.dokter.nama;
     hari.value = data.hari.hari;
@@ -36,7 +34,6 @@ fetch("http://127.0.0.1:3000/api/jadwal_dokter/"+ queryString.id)
   });
 
 inputButton.addEventListener("click", () => { 
-  // Ambil nilai input dari formulir
   const nama_lengkap = namalengkapInput.value;
   const nik = parseInt(nikInput.value);
   const jenis_kelamin = jeniskelaminInput.value;
@@ -44,37 +41,21 @@ inputButton.addEventListener("click", () => {
   const tanggal_lahir = tanggallahirInput.value;
   const alamat = alamatInput.value;
   const no_hp = nohpInput.value;
+  const reservasi = reservasiInput.value;
   const id_jadwal = idjadwalInput.value;
-  // const tgl_reservasi = tglreservasiInput.value;
-  // Validasi input
-  if (
-    !nama_lengkap ||
-    !nik ||
-    !jenis_kelamin ||
-    !tempat_lahir ||
-    !tanggal_lahir ||
-    !alamat ||
-    !no_hp ||
-    !id_jadwal
-    // !tgl_reservasi
-  ) {
-    alert("Silakan lengkapi semua field");
-    return;
-  }
-  // Buat objek data yang akan dikirim ke server
+
   const data = {
     nama_lengkap: nama_lengkap,
     nik: nik,
     jenis_kelamin: jenis_kelamin,
     tempat_lahir: tempat_lahir,
-    tanggal_lahir: tanggal_lahir,
+    tanggal_lahir: tanggal_lahir, // Format tanggal sesuai kebutuhan backend
     alamat: alamat,
     no_hp: no_hp,
+    reservasi: reservasi,
     id_jadwal: id_jadwal,
-    // tgl_reservasi: tgl_reservasi,
   };
-//cobain developinp
-  // Kirim permintaan POST ke server untuk menambahkan data
+
   fetch("http://127.0.0.1:3000/api/belajar/", {
     method: "POST",
     headers: {
@@ -85,11 +66,18 @@ inputButton.addEventListener("click", () => {
     .then((response) => response.json())
     .then((result) => {
       console.log("Sukses:", result);
-      const id_passien = result.data
-      window.location.href = `print_form.html?id=${id_passien}`;
+      const id_pasien = result.data;
+      window.location.href = `print_form.html?id=${id_pasien}`;
     })
     .catch((error) => {
       console.error("Error:", error);
       alert("Terjadi kesalahan saat menambahkan data.");
     });
 });
+
+// Fungsi untuk memformat tanggal ke format yang diinginkan oleh backend
+// function formatDate(inputDate) {
+//   const options = { year: 'numeric', month: '2-digit', day: '2-digit' };
+//   const date = new Date(inputDate);
+//   return date.toLocaleDateString('en-GB', options);
+// }
