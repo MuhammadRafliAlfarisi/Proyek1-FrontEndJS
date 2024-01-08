@@ -10,7 +10,7 @@ const tempatlahirInput = document.getElementById("tempat_lahir");
 const tanggallahirInput = document.getElementById("tanggal_lahir");
 const alamatInput = document.getElementById("alamat");
 const nohpInput = document.getElementById("no_hp");
-const reservasiInput = document.getElementById("reservasi");
+// const reservasiInput = document.getElementById("reservasi");
 const idjadwalInput = document.getElementById("id_jadwal");
 const nama_dokter = document.getElementById("nama_dokter");
 const hari = document.getElementById("hari");
@@ -41,7 +41,7 @@ inputButton.addEventListener("click", () => {
   const tanggal_lahir = tanggallahirInput.value;
   const alamat = alamatInput.value;
   const no_hp = nohpInput.value;
-  const reservasi = reservasiInput.value;
+  // const reservasi = reservasiInput.value;
   const id_jadwal = idjadwalInput.value;
 
   const data = {
@@ -52,7 +52,7 @@ inputButton.addEventListener("click", () => {
     tanggal_lahir: tanggal_lahir, // Format tanggal sesuai kebutuhan backend
     alamat: alamat,
     no_hp: no_hp,
-    reservasi: reservasi,
+    // reservasi: reservasi,
     id_jadwal: id_jadwal,
   };
 

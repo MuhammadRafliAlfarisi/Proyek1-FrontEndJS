@@ -17,7 +17,7 @@
       document.getElementById("tanggal_lahir").textContent = moment(result.data.tanggal_lahir).format('dddd, DD-MM-YYYY');
       document.getElementById("alamat").textContent = result.data.alamat;
       document.getElementById("no_hp").textContent = result.data.no_hp;
-      document.getElementById("reservasi").textContent = moment(result.data.reservasi).format('dddd, DD-MM-YYYY');
+      document.getElementById("reservasi").textContent = moment(result.data.reservasi).format('DD-MM-YYYY, HH:mm');
       document.getElementById("nama_dokter").textContent = result.data.jadwal_dokter.dokter.nama;
       document.getElementById("hari").textContent = result.data.jadwal_dokter.hari.hari;
       document.getElementById("jam").textContent = result.data.jadwal_dokter.jam.jam;
